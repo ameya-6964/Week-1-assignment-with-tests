@@ -7,8 +7,28 @@
   - `npm run test-anagram`
 */
 
-function isAnagram(str1, str2) {
+function sortstrings(str){
+  var array = str.split("");
+  array = array.sort();
+  var sortedArray = array.join("");
+  return sortedArray;
+}
+
+function isAnagram(str1,str2){
+  var LowerCaseStr1 = str1.toLowerCase();
+  var LowerCaseStr2 = str2.toLowerCase();
+  
+    if(sortstrings(LowerCaseStr1) == sortstrings(LowerCaseStr2)){
+        return true;
+    }
+    else{
+        return false;
+    }
 
 }
+ 
+
+//isAnagram("Bad Credit","Debit Card")
+
 
 module.exports = isAnagram;
